@@ -307,12 +307,13 @@
 
 
 
+
 import './App.css';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import { useEffect, useState } from 'react';
 import RegisterModal from "./register";
-// import heroBackground from './assets/bg2.jpg'; // No longer needed, remove this line
+// Your App.css file should contain the responsive background images for the #home section.
 
 // --- Navbar Component ---
 const Navbar = ({ isNavOpen, setNavOpen }) => (
@@ -378,33 +379,29 @@ function App() {
     <div className="text-gray-900">
       <Navbar isNavOpen={isNavOpen} setNavOpen={setNavOpen} />
 
-      {/* --- Hero Section - FIXED --- */}
+      {/* --- Hero Section --- */}
       <section
         id="home"
-        className="min-h-screen flex flex-col items-center justify-end pb-16 text-center text-white relative"
+        className="min-h-screen flex flex-col items-center justify-end pb-24 text-center text-white relative"
       >
-        {/* The <img> tag has been removed. Your App.css now controls the background. */}
-        
-        <div className="absolute inset-0 bg-black opacity-30"></div>
+        {/* --- The overlay is now a solid color for high contrast --- */}
+        <div className="absolute inset-0 bg-black opacity-60"></div>
         
         <div className="relative z-10 flex w-full flex-col items-center justify-center px-6">
-          
-          {/* Restored the missing h1 title */}
-         
-          
-          <p className="max-w-2xl text-lg mb-8">
+          <h1 className="text-5xl font-extrabold mb-4 text-shadow-lg">Digital Twin Workshop</h1>
+          <p className="max-w-2xl text-lg mb-8 text-shadow-md">
             Explore Digital Twin technologies, real-time data, AI integration, and industrial applications.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <button
               onClick={() => setModalOpen(true)}
-              className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold shadow hover:bg-gray-200"
+              className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold shadow hover:bg-gray-200 transition-transform transform hover:scale-105"
             >
               Register
             </button>
             <a
               href="#about"
-              className="border border-white px-6 py-3 rounded-xl font-semibold hover:bg-white hover:text-blue-600"
+              className="border border-white px-6 py-3 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all"
             >
               Learn More
             </a>
