@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+#home {
+  background-image: url('./assets/mobile-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Style for medium screens and up (Tailwind's 'md' breakpoint is 768px) */
+@media (min-width: 768px) {
+  #home {
+    background-image: url('./assets/bg2.jpg');
+  }
+}
