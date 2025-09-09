@@ -17,7 +17,7 @@ const RegisterModal = ({ isOpen, onClose }) => {
     e.preventDefault();
 
     try {
-      await fetch("https://script.google.com/macros/s/AKfycbycP0XgOwkSpMHJrHJFgIohjbaZGiyUwfWBna7y9jW8g8_cM-99Hrip83VNox4Mwi7B/exec", {
+      await fetch("https://script.google.com/macros/s/AKfycbwzp27tet8vu3tRdpeob1zpxp0laVloFceIeFqu-2B3o_1EZgV8QkGaGVGXDLpbSlBY/exec", {
         method: "POST",
         body: JSON.stringify(formData),
         headers: {
@@ -31,6 +31,8 @@ const RegisterModal = ({ isOpen, onClose }) => {
       alert("❌ Something went wrong!");
     }
   };
+
+
 
   if (!isOpen) return null;
 
