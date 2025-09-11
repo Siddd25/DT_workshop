@@ -201,7 +201,7 @@ const RegisterModal = ({ isOpen, onClose }) => {
         });
         
         console.log("✅ Request sent with no-cors mode (can't read response)");
-        alert("✅ Registration submitted! Please check your Google Sheet to confirm.");
+        alert("✅ Registration successfull, we will contact you shortly!");
         setFormData({ name: "", email: "", organisation: "", contact: "" });
         onClose();
         
@@ -258,6 +258,8 @@ const RegisterModal = ({ isOpen, onClose }) => {
               value={formData.email}
               placeholder="Enter your email"
               onChange={handleChange}
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              title="Please enter a valid email address"
               className="w-full border p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
               required
               disabled={isSubmitting}
