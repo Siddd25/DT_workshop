@@ -235,7 +235,7 @@ function App() {
         <div className="absolute inset-0 bg-black opacity-60"></div>
         
         <div className="relative z-10 flex w-full flex-col items-center justify-center px-6">
-          <h1 className="text-6xl font-extrabold mb-4 text-shadow-lg">Digital Twin Workshop</h1>
+          <h1 className="text-5xl font-extrabold mb-4 text-shadow-lg">Digital Twin Workshop</h1>
           <p className="max-w-2xl text-lg mb-6 text-shadow-md">
             Explore Digital Twin technologies, real-time data, AI integration, and industrial applications.
           </p>
