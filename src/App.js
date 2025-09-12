@@ -276,6 +276,7 @@ import { useEffect, useState } from 'react';
 import RegisterModal from "./register";
 
 // --- Navbar Component ---
+// --- Navbar Component ---
 const Navbar = ({ isNavOpen, setNavOpen }) => (
   <nav className="bg-white/80 backdrop-blur-md fixed top-0 left-0 right-0 z-40 shadow-md">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -302,11 +303,11 @@ const Navbar = ({ isNavOpen, setNavOpen }) => (
           >
             <span className="sr-only">Open main menu</span>
             {!isNavOpen ? (
-              <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <svg className="block h-6 w-6" xmlns="http://www.w.org/2000/svg" fill="none" viewBox="http://googleusercontent.com/images.google.com/9" stroke="currentColor" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             ) : (
-              <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="http://googleusercontent.com/images.google.com/10" stroke="currentColor" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
             )}
@@ -314,14 +315,17 @@ const Navbar = ({ isNavOpen, setNavOpen }) => (
         </div>
       </div>
     </div>
+
+    {/* This is the mobile menu section */}
     {isNavOpen && (
       <div className="md:hidden" id="mobile-menu">
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <a href="#about" className="text-gray-600 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">About</a>
-          <a href="#topics" className="text-gray-600 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Topics</a>
-          <a href="#speakers" className="text-gray-600 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Speakers</a>
-          <a href="#venue" className="text-gray-600 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Venue</a>
-          <a href="#register" className="text-gray-600 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Register</a>
+          {/* --- CHANGES APPLIED HERE --- */}
+          <a href="#about" onClick={() => setNavOpen(false)} className="text-gray-600 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">About</a>
+          <a href="#topics" onClick={() => setNavOpen(false)} className="text-gray-600 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Topics</a>
+          <a href="#speakers" onClick={() => setNavOpen(false)} className="text-gray-600 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Speakers</a>
+          <a href="#venue" onClick={() => setNavOpen(false)} className="text-gray-600 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Venue</a>
+          <a href="#register" onClick={() => setNavOpen(false)} className="text-gray-600 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Register</a>
         </div>
       </div>
     )}
