@@ -361,7 +361,7 @@ function App() {
 
           <div className="mb-8 space-y-2 text-lg font-medium">
             <p className="px-4 py-2 rounded-xl bg-white/30 backdrop-blur-md shadow-md">
-              Oct 11-12, 2025 <span className="font-semibold"> · IIT Bombay</span>
+              Oct 11-12, 2025 <span className="font-semibold"> · IEOR, IIT Bombay</span>
             </p>
           </div>
 
