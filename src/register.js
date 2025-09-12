@@ -252,7 +252,7 @@ const RegisterModal = ({ isOpen, onClose }) => {
     
     if (name === 'contact' && value) {
       if (!validateContact(value)) {
-        setErrors({ ...errors, contact: "Please enter exactly 10 digits" });
+        setErrors({ ...errors, contact: "Please enter a valid Phone number" });
       }
     }
   };
@@ -273,7 +273,7 @@ const RegisterModal = ({ isOpen, onClose }) => {
     if (!formData.contact.trim()) {
       newErrors.contact = "Phone number is required";
     } else if (!validateContact(formData.contact)) {
-      newErrors.contact = "Please enter exactly 10 digits";
+      newErrors.contact = "Please enter a valid Phone number";
     }
     
     setErrors(newErrors);
