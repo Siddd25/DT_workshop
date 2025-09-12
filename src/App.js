@@ -487,7 +487,7 @@ function App() {
           </p>
           <div className="rounded-2xl overflow-hidden shadow-xl" data-aos="fade-up" data-aos-delay="200">
             <iframe
-              src="http://googleusercontent.com/maps.google.com/5"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.480211004412!2d72.91324967425321!3d19.130445850262905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c7f697939a83%3A0xbda25f655512b26e!2sF.C.%20Kohli%20Auditorium!5e0!3m2!1sen!2sin!4v1757667228185!5m2!1sen!2sin"
               width="100%"
               height="450"
               style={{ border: 0 }}
