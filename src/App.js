@@ -282,7 +282,7 @@ const Navbar = ({ isNavOpen, setNavOpen }) => (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex items-center justify-between h-16">
         <div className="flex-shrink-0">
-          <a href="#home" className="font-bold text-xl text-gray-800">Digital Twin 2025</a>
+          <a href="#home" className="font-bold text-xl text-gray-800">Digital Twin 2025, IEOR IITB</a>
         </div>
         <div className="hidden md:block">
           <div className="ml-10 flex items-baseline space-x-4">
@@ -522,7 +522,7 @@ function App() {
 
       {/* --- Footer --- */}
       <footer className="py-8 text-center bg-gray-900 text-gray-400">
-        <p>@Digital Twin Worksop. IIT Bombay.</p>
+        <p>@Digital Twin Worksop. IEOR, IIT Bombay.</p>
       </footer>
 
       <RegisterModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
