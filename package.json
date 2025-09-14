@@ -1,5 +1,6 @@
 {
   "name": "workshop-dt",
+  "homepage":"/digital-twin-workshop",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
