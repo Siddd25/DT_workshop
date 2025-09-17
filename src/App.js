@@ -860,7 +860,7 @@ function App() {
         
         {/* Student 2 */}
         <div className="flex flex-col items-center">
-          <img src={process.env.PUBLIC_URL + '/images/priyansh.jpg'} alt="Priyansh Srivastava" className="w-24 h-24 rounded-full object-cover shadow-md mb-2"/>
+          <img src={process.env.PUBLIC_URL + '/images/Priyansh.jpg'} alt="Priyansh Srivastava" className="w-24 h-24 rounded-full object-cover shadow-md mb-2"/>
           <a href="https://www.linkedin.com/in/priyansh-srivastava-2b67891bb?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" className="text-lg text-gray-700 hover:underline">Priyansh Srivastava</a>
         </div>
 
