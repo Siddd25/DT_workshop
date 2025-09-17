@@ -852,7 +852,7 @@ function App() {
       <h3 className="text-2xl font-semibold text-blue-700 mb-6">Student Organising Committee</h3>
       
       {/* Container for student profiles with images */}
-      <div className="flex flex-wrap justify-center gap-y-8 gap-x-8 max-w-4xl mx-auto">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-8 gap-x-4 max-w-4xl mx-auto">
         
         {/* Student 1 */}
         <div className="flex flex-col items-center">
