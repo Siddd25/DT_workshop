@@ -68,7 +68,7 @@ const Navbar = ({ isNavOpen, setNavOpen }) => (
         <div className="pt-4 pb-2 border-t border-gray-200">
             <div className="flex justify-center">
               <img 
-                src={process.env.PUBLIC_URL + '/images/second-logo.png'} 
+                src={process.env.PUBLIC_URL + '/images/ieor_logo.png'} 
                 alt="Second Logo" 
                 className="h-10" 
               />
@@ -166,6 +166,46 @@ function App() {
         </div>
       </section>
 
+      {/* --- Who Should Attend Section --- */}
+<section id="who-should-attend" className="py-20 bg-gray-100 px-6">
+  <div className="max-w-5xl mx-auto">
+    <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">
+      Who Should Attend?
+    </h2>
+    
+    <p className="text-lg text-center text-gray-700 max-w-3xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="100">
+      This workshop is designed for a diverse audience of professionals, researchers, and students who are passionate about leveraging cutting-edge technology to model, analyze, and optimize complex systems.
+    </p>
+
+    <div className="grid md:grid-cols-2 gap-10 text-left">
+
+      {/* Column 1: Industry */}
+      <div data-aos="fade-up" data-aos-delay="200">
+        <h3 className="text-2xl font-semibold text-blue-700 mb-4">Industry Professionals & Technologists</h3>
+        <ul className="list-disc list-inside space-y-3 text-gray-800">
+          <li><strong>Engineers</strong> in Industrial, Systems, Mechanical, and Manufacturing fields.</li>
+          <li><strong>Data Scientists, Analysts, & ML Engineers</strong> developing predictive models.</li>
+          <li><strong>Software Developers & Solutions Architects</strong> building IT infrastructure.</li>
+          <li><strong>R&D, Product, & Operations Managers</strong> overseeing complex systems.</li>
+          <li><strong>Technology Strategists & Consultants</strong> advising on Industry 4.0.</li>
+        </ul>
+      </div>
+
+      {/* Column 2: Academia */}
+      <div data-aos="fade-up" data-aos-delay="300">
+        <h3 className="text-2xl font-semibold text-blue-700 mb-4">Academics & Researchers</h3>
+        <ul className="list-disc list-inside space-y-3 text-gray-800">
+          <li><strong>Graduate Students</strong> (Master's and Ph.D.) in relevant fields.</li>
+          <li><strong>Faculty Members & Research Scholars</strong> exploring new frontiers.</li>
+          <li><strong>Senior Undergraduate Students</strong> with a strong interest in simulation.</li>
+        </ul>
+      </div>
+    </div>
+
+   
+  </div>
+</section>
+
       {/* --- Topics Section --- */}
       <section id="topics" className="py-20 bg-gray-100 px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">Topics Covered</h2>
@@ -192,7 +232,6 @@ function App() {
             { name: 'Navonil Mustafee', institution: 'University of Exeter, UK', profileUrl: 'https://experts.exeter.ac.uk/22797-nav-mustafee', mode: 'Hybrid', imageUrl: process.env.PUBLIC_URL +'/images/s3.jpeg' },
             { name: 'Seunghan Lee', institution: 'Mississippi State University, USA', profileUrl: 'https://www.ise.msstate.edu/people/faculty/seunghan-lee/', mode: 'Hybrid', imageUrl: process.env.PUBLIC_URL +'/images/s4.jpeg' },
             { name: 'Varun Ramamohan', institution: 'IIT Delhi, India', profileUrl: 'https://mech.iitd.ac.in/faculty-profile/189', mode: 'In-person', imageUrl: process.env.PUBLIC_URL + '/images/s5.jpg' },
-            { name: 'Neha Karanjkar', institution: 'IIT Goa, India', profileUrl: 'https://nehakaranjkar.github.io/', mode: 'In-person', imageUrl: process.env.PUBLIC_URL + '/images/s5.jpg' },
             { name: 'Souvik Barat', institution: 'TCS, India', profileUrl: 'https://www.linkedin.com/in/souvikbarat/', mode: 'In-person', imageUrl: process.env.PUBLIC_URL +'/images/s7.jpeg' },
             { name: 'Jayendran Venkateswaran', institution: 'IIT Bombay, India', profileUrl: 'https://www.ieor.iitb.ac.in/~jayendran', mode: 'In-person', imageUrl: process.env.PUBLIC_URL + '/images/s8.jpg' },
             { name: 'Saurabh Jain', institution: 'IIT Bombay, India', profileUrl: 'https://www.ieor.iitb.ac.in/saurabh', mode: 'In-person', imageUrl: process.env.PUBLIC_URL + '/images/s9.png' }
@@ -238,6 +277,44 @@ function App() {
           );
         })()}
       </section>
+      {/* --- Organisers Section --- */}
+{/* --- Organisers Section --- */}
+<section id="organisers" className="py-20 px-6">
+  <div className="max-w-5xl mx-auto text-center">
+    <h2 className="text-3xl md:text-4xl font-bold mb-12" data-aos="fade-up">
+      Meet the Organisers
+    </h2>
+    
+    {/* Faculty Advisor */}
+    <div className="mb-16" data-aos="fade-up" data-aos-delay="100">
+      <h3 className="text-2xl font-semibold text-blue-700 mb-6">Faculty Advisor</h3>
+      <div className="inline-block">
+        <img
+          src={process.env.PUBLIC_URL + '/images/s9.png'}
+          alt="Faculty Advisor"
+          className="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-lg"
+        />
+        <p className="text-xl font-semibold text-gray-800">Saurabh Jain</p>
+        <p className="text-gray-600">Assistant Professor, IEOR, IITB.</p>
+      </div>
+    </div>
+
+    {/* Student Organising Committee */}
+    <div data-aos="fade-up" data-aos-delay="200">
+      <h3 className="text-2xl font-semibold text-blue-700 mb-6">Student Organising Committee</h3>
+      {/* ✅ --- THIS LINE WAS CHANGED --- ✅ */}
+      <div className="flex flex-wrap justify-center gap-y-4 gap-x-6 max-w-4xl mx-auto">
+        <a href="#" target="_blank" rel="noopener noreferrer" className="text-lg text-gray-700 hover:underline">Varinder Singh</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" className="text-lg text-gray-700 hover:underline">Priyansh Shrivastava</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" className="text-lg text-gray-700 hover:underline">Siddhesh Madkaikar</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" className="text-lg text-gray-700 hover:underline">Chanchal Rai</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" className="text-lg text-gray-700 hover:underline">Teesha</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" className="text-lg text-gray-700 hover:underline">Pushpendra</a>
+      </div>
+    </div>
+
+  </div>
+</section>
 
       <section id="venue" className="py-20 bg-gray-100 px-6">
         <div className="max-w-5xl mx-auto">
@@ -279,9 +356,37 @@ function App() {
       </section>
 
       {/* --- Footer --- */}
-      <footer className="py-8 text-center bg-gray-900 text-gray-400">
-        <p>@Digital Twin Worksop. IEOR, IIT Bombay.</p>
-      </footer>
+      <footer className="py-12 bg-gray-900 text-gray-400">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    {/* Logos Container */}
+    <div className="flex justify-center items-center gap-x-12 mb-8">
+      {/* IITB Logo */}
+      <a href="https://www.iitb.ac.in/" target="_blank" rel="noopener noreferrer">
+        <img 
+          src={process.env.PUBLIC_URL + '/images/iitb.png'} 
+          alt="IIT Bombay Logo"
+          // Subtle styling: grayscale, semi-transparent, and brightens on hover
+          className="h-14 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+        />
+      </a>
+      {/* IEOR Logo */}
+      <a href="https://www.ieor.iitb.ac.in/" target="_blank" rel="noopener noreferrer">
+        <img 
+          src={process.env.PUBLIC_URL + '/images/ieor_logo.png'} 
+          alt="IEOR Department Logo"
+          className="h-14 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+        />
+      </a>
+    </div>
+
+    {/* Footer Text */}
+    <p className="text-center text-sm">
+      © 2025 Digital Twin Workshop | Department of IEOR, IIT Bombay
+    </p>
+
+  </div>
+</footer>
 
       <RegisterModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
     </div>
