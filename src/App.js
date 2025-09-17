@@ -65,6 +65,17 @@ const Navbar = ({ isNavOpen, setNavOpen }) => (
           <a href="#speakers" onClick={() => setNavOpen(false)} className="text-gray-600 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Speakers</a>
           <a href="#venue" onClick={() => setNavOpen(false)} className="text-gray-600 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Venue</a>
           <a href="#register" onClick={() => setNavOpen(false)} className="text-gray-600 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Register</a>
+        <div className="pt-4 pb-2 border-t border-gray-200">
+            <div className="flex justify-center">
+              <img 
+                src={process.env.PUBLIC_URL + '/images/second-logo.png'} 
+                alt="Second Logo" 
+                className="h-10" 
+              />
+            </div>
+          </div>
+
+
         </div>
       </div>
     )}
