@@ -423,6 +423,7 @@ const Navbar = ({ isNavOpen, setNavOpen }) => (
             <a href="#about" className="text-gray-600 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">About</a>
             <a href="#topics" className="text-gray-600 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">Topics</a>
             <a href="#speakers" className="text-gray-600 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">Speakers</a>
+            <a href="#schedule" className="text-gray-600 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">Schedule</a>
             <a href="#venue" className="text-gray-600 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">Venue</a>
             <a href="#register" className="text-gray-600 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">Register</a>
             <img 
@@ -461,6 +462,7 @@ const Navbar = ({ isNavOpen, setNavOpen }) => (
           <a href="#about" onClick={() => setNavOpen(false)} className="text-gray-600 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">About</a>
           <a href="#topics" onClick={() => setNavOpen(false)} className="text-gray-600 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Topics</a>
           <a href="#speakers" onClick={() => setNavOpen(false)} className="text-gray-600 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Speakers</a>
+          <a href="#schedule" onClick={() => setNavOpen(false)} className="text-gray-600 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Schedule</a>
           <a href="#venue" onClick={() => setNavOpen(false)} className="text-gray-600 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Venue</a>
           <a href="#register" onClick={() => setNavOpen(false)} className="text-gray-600 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Register</a>
         <div className="pt-4 pb-2 border-t border-gray-200">
@@ -850,7 +852,7 @@ function App() {
       <h3 className="text-2xl font-semibold text-blue-700 mb-6">Student Organising Committee</h3>
       
       {/* Container for student profiles with images */}
-      <div className="flex flex-wrap justify-center gap-y-8 gap-x-10 max-w-4xl mx-auto">
+      <div className="flex flex-wrap justify-center gap-y-8 gap-x-8 max-w-4xl mx-auto">
         
         {/* Student 1 */}
         <div className="flex flex-col items-center">
