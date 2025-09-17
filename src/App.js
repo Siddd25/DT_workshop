@@ -551,7 +551,7 @@ const Navbar = ({ isNavOpen, setNavOpen }) => (
         <div className="flex-shrink-0">
           <a href="#home" className="flex items-center gap-3">
             <img 
-              src={'/digital-twin-workshop/images/iitb.png'} 
+              src={process.env.PUBLIC_URL + '/images/iitb.png'} 
               alt="IIT Bombay Logo" 
               className="h-10" 
             />
@@ -566,7 +566,7 @@ const Navbar = ({ isNavOpen, setNavOpen }) => (
             <a href="#venue" className="text-gray-600 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">Venue</a>
             <a href="#register" className="text-gray-600 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">Register</a>
             <img 
-              src={'/digital-twin-workshop/images/ieor_logo.png'} 
+              src={process.env.PUBLIC_URL + '/images/ieor_logo.png'} 
               alt="Second Logo" 
               className="h-10" 
             />
@@ -714,15 +714,15 @@ function App() {
         {(() => {
           // ✅ CHANGE 1: Updated `imageUrl` to use local paths.
           const speakers = [
-            { name: 'Mamadou Kaba Traoré', institution: 'University of Bordeaux, France', profileUrl: 'https://www.ims-bordeaux.fr/researchers-and-publications/traore-mamadou/', mode: 'In-person', imageUrl: '/digital-twin-workshop/images/s1.jpeg' },
-            { name: 'Lora Cavuoto', institution: 'University of Buffalo, USA', profileUrl: 'https://engineering.buffalo.edu/home/research/faculty/profiles.host.html/content/shared/engineering/industrial-systems/profiles/faculty/cavuoto-lora.html', mode: 'Hybrid', imageUrl: '/digital-twin-workshop/images/s2.jpg' },
-            { name: 'Navonil Mustafee', institution: 'University of Exeter, UK', profileUrl: 'https://experts.exeter.ac.uk/22797-nav-mustafee', mode: 'Hybrid', imageUrl: '/digital-twin-workshop/images/s3.jpeg' },
-            { name: 'Seunghan Lee', institution: 'Mississippi State University, USA', profileUrl: 'https://www.ise.msstate.edu/people/faculty/seunghan-lee/', mode: 'Hybrid', imageUrl: '/digital-twin-workshop/images/s4.jpeg' },
-            { name: 'Varun Ramamohan', institution: 'IIT Delhi, India', profileUrl: 'https://mech.iitd.ac.in/faculty-profile/189', mode: 'In-person', imageUrl: '/digital-twin-workshop/images/s5.jpg' },
+            { name: 'Mamadou Kaba Traoré', institution: 'University of Bordeaux, France', profileUrl: 'https://www.ims-bordeaux.fr/researchers-and-publications/traore-mamadou/', mode: 'In-person', imageUrl: process.env.PUBLIC_URL +'/images/s1.jpeg' },
+            { name: 'Lora Cavuoto', institution: 'University of Buffalo, USA', profileUrl: 'https://engineering.buffalo.edu/home/research/faculty/profiles.host.html/content/shared/engineering/industrial-systems/profiles/faculty/cavuoto-lora.html', mode: 'Hybrid', imageUrl: process.env.PUBLIC_URL +'/images/s2.jpg' },
+            { name: 'Navonil Mustafee', institution: 'University of Exeter, UK', profileUrl: 'https://experts.exeter.ac.uk/22797-nav-mustafee', mode: 'Hybrid', imageUrl: process.env.PUBLIC_URL +'/images/s3.jpeg' },
+            { name: 'Seunghan Lee', institution: 'Mississippi State University, USA', profileUrl: 'https://www.ise.msstate.edu/people/faculty/seunghan-lee/', mode: 'Hybrid', imageUrl: process.env.PUBLIC_URL +'/images/s4.jpeg' },
+            { name: 'Varun Ramamohan', institution: 'IIT Delhi, India', profileUrl: 'https://mech.iitd.ac.in/faculty-profile/189', mode: 'In-person', imageUrl: process.env.PUBLIC_URL + '/images/s5.jpg' },
             { name: 'Neha Karanjkar', institution: 'IIT Goa, India', profileUrl: 'https://nehakaranjkar.github.io/', mode: 'In-person', imageUrl: '/images/neha-karanjkar.jpg' },
-            { name: 'Souvik Barat', institution: 'TCS, India', profileUrl: 'https://www.linkedin.com/in/souvikbarat/', mode: 'In-person', imageUrl: '/digital-twin-workshop/images/s7.jpeg' },
-            { name: 'Jayendran Venkateswaran', institution: 'IIT Bombay, India', profileUrl: 'https://www.ieor.iitb.ac.in/~jayendran', mode: 'In-person', imageUrl: '/digital-twin-workshop/images/s8.jpg' },
-            { name: 'Saurabh Jain', institution: 'IIT Bombay, India', profileUrl: 'https://www.ieor.iitb.ac.in/saurabh', mode: 'In-person', imageUrl: '/digital-twin-workshop/images/s9.png' }
+            { name: 'Souvik Barat', institution: 'TCS, India', profileUrl: 'https://www.linkedin.com/in/souvikbarat/', mode: 'In-person', imageUrl: process.env.PUBLIC_URL +'/images/s7.jpeg' },
+            { name: 'Jayendran Venkateswaran', institution: 'IIT Bombay, India', profileUrl: 'https://www.ieor.iitb.ac.in/~jayendran', mode: 'In-person', imageUrl: process.env.PUBLIC_URL + '/images/s8.jpg' },
+            { name: 'Saurabh Jain', institution: 'IIT Bombay, India', profileUrl: 'https://www.ieor.iitb.ac.in/saurabh', mode: 'In-person', imageUrl: process.env.PUBLIC_URL + '/images/s9.png' }
           ];
 
           return (
