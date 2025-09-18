@@ -438,7 +438,7 @@ function App() {
     
     {/* Faculty Advisor */}
     <div className="mb-16" data-aos="fade-up" data-aos-delay="100">
-      <h3 className="text-2xl font-semibold text-blue-700 mb-6">Faculty Advisor</h3>
+      <h3 className="text-2xl font-semibold text-blue-700 mb-6">Workshop Coordinator</h3>
       <div className="inline-block">
         <img
           src={process.env.PUBLIC_URL + '/images/s9.png'}
