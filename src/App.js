@@ -147,7 +147,7 @@ function App() {
       <section id="about" className="py-20 px-6 mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">About the Workshop</h2>
 
-        <ul className="list-disc list-inside space-y-4 text-lg text-gray-700 max-w-3xl mx-auto mb-12 text-left">
+        <ul className="list-disc list-inside space-y-4 text-lg text-gray-700 max-w-3xl mx-auto mb-12 text-left" data-aos="fade-up">
           <li>
             <strong>Explore Digital Twins:</strong> Dive into dynamic virtual models of physical systems, continuously updated with real-time data to drive smarter decision-making,predictive maintenance and system optimisation.
           </li>
@@ -168,7 +168,7 @@ function App() {
           </li>
         </ul>
 
-        <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6 text-center shadow-sm max-w-2xl mx-auto">
+        <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6 text-center shadow-sm max-w-2xl mx-auto" data-aos="fade-up">
           <h3 className="text-2xl font-semibold text-blue-700 mb-4">Workshop Details</h3>
           <p className="text-lg mb-2">📍 Venue: <span className="font-medium">F.C Kohli Auditorium, IIT Bombay.</span></p>
           <p className="text-lg mb-2">📅 Dates: <span className="font-medium">11th & 12th October 2025</span></p>
@@ -224,7 +224,7 @@ function App() {
       {/* --- Topics Section --- */}
       <section id="topics" className="py-20 bg-gray-100 px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">Topics Covered</h2>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mx-auto">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mx-auto" data-aos="fade-up">
           {["Fundamentals and Concepts of Digital Twins.", "Data Integration and System Interoperability.", "Model Validation, Optimization, and Automation.", "Human Factors and Interaction in Digital Twins.", "AI and Decision Support in Digital Twins.", "Practical Applications and Hands-on Modeling."].map((topic, idx) => (
             <div key={idx} className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
               {topic}
@@ -253,7 +253,7 @@ function App() {
           ];
 
           return (
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10" data-aos="fade-up">
               {speakers.map((speaker, idx) => (
                 <div key={idx} className="text-center bg-white p-8 rounded-2xl shadow hover:shadow-lg transition-shadow flex flex-col items-center justify-between">
                   <div>
