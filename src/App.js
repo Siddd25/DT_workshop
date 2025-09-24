@@ -140,8 +140,114 @@ function App() {
               Learn More
             </a>
           </div>
+           <p className="mt-6 text-lg font-bold text-gray-200 text-shadow-md">
+            Registration Deadline: Oct 3, 2025 (End of Day)
+          </p>
+        </div>
+
+      </section>
+
+    {/* --- Sponsors Section --- */}
+      <section id="sponsors" className="py-20 bg-gray-50 px-6">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12" data-aos="fade-up">
+            Our Sponsors
+          </h2>
+
+          {/* Main container for sponsor rows */}
+          <div 
+            className="flex flex-col items-center gap-12" // Stacks rows vertically and adds space between them
+            data-aos="fade-up" 
+            data-aos-delay="100"
+          >
+            {/* --- First Row of Sponsors --- */}
+            <div className="flex justify-center items-center gap-12 md:gap-20">
+              {/* --- Sponsor 1 --- */}
+              <a 
+                href="https://www.ieor.iitb.ac.in/fedexalfa/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <img 
+                  src={process.env.PUBLIC_URL + '/images/fedex.png'} 
+                  alt="FEDEX ALFA" 
+                  className="h-16 md:h-20  hover:opacity-100 transition-all duration-300" 
+                />
+              </a>
+
+              {/* --- Sponsor 2 --- */}
+              <a 
+                href="https://rnd.iitb.ac.in/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <img 
+                  src={process.env.PUBLIC_URL + '/images/ircc.png'} 
+                  alt="IRCC" 
+                  className="h-16 md:h-20  hover:opacity-100 transition-all duration-300" 
+                />
+              </a>
+            </div>
+
+            {/* --- Second Row of Sponsors (New) --- */}
+            <div className="flex justify-center items-center">
+              {/* --- Sponsor 3 (Replace with your sponsor's details) --- */}
+              <a 
+                href="https://ioe.iitb.ac.in/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <img 
+                  src={process.env.PUBLIC_URL + '/images/ioe.jpeg'} 
+                  alt="IOE" 
+                  className="h-16 md:h-20  hover:opacity-100 transition-all duration-300" 
+                />
+              </a>
+            </div>
+            
+          </div>
         </div>
       </section>
+
+      {/* --- NEW AFFILIATIONS SECTION --- */}
+      <section id="affiliations" className="py-20 bg-white px-6">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12" data-aos="fade-up">
+            Our Affiliations
+          </h2>
+          <div 
+            className="flex justify-center items-center flex-wrap gap-12 md:gap-20" 
+            data-aos="fade-up" 
+            data-aos-delay="100"
+          >
+            {/* --- Affiliation 1 --- */}
+            <a 
+              href="https://www.ieor.iitb.ac.in/" /* <-- CHANGE THIS */
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <img 
+                src={process.env.PUBLIC_URL + '/images/ieor_logo.png'} /* <-- CHANGE THIS */
+                alt="IEOR" /* <-- CHANGE THIS */
+                className="h-20 md:h-24 hover:opacity-100 transition-all duration-300" 
+              />
+            </a>
+            {/* --- Affiliation 2 --- */}
+            <a 
+              href="https://www.tcaai.iitb.ac.in/" /* <-- CHANGE THIS */
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <img 
+                src={process.env.PUBLIC_URL + '/images/tc2ai.png'} /* <-- CHANGE THIS */
+                alt="TCAAI" /* <-- CHANGE THIS */
+                className="h-20 md:h-24 hover:opacity-100 transition-all duration-300"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
 
       {/* --- About Section --- */}
       <section id="about" className="py-20 px-6 mx-auto">
@@ -247,6 +353,7 @@ function App() {
             { name: 'Navonil Mustafee', institution: 'University of Exeter, UK', profileUrl: 'https://experts.exeter.ac.uk/22797-nav-mustafee', mode: 'Hybrid', imageUrl: process.env.PUBLIC_URL +'/images/s3.jpeg' },
             { name: 'Seunghan Lee', institution: 'Mississippi State University, USA', profileUrl: 'https://www.ise.msstate.edu/people/faculty/seunghan-lee/', mode: 'Hybrid', imageUrl: process.env.PUBLIC_URL +'/images/s4.jpeg' },
             { name: 'Varun Ramamohan', institution: 'IIT Delhi, India', profileUrl: 'https://mech.iitd.ac.in/faculty-profile/189', mode: 'In-person', imageUrl: process.env.PUBLIC_URL + '/images/s5.jpg' },
+            { name: 'Neha Karanjkar', institution: 'IIT Goa, India', profileUrl: 'https://nehakaranjkar.github.io/', mode: 'In-person', imageUrl: process.env.PUBLIC_URL + '/images/s6.jpg' }, 
             { name: 'Souvik Barat', institution: 'TCS, India', profileUrl: 'https://www.linkedin.com/in/souvikbarat/', mode: 'In-person', imageUrl: process.env.PUBLIC_URL +'/images/s7.jpeg' },
             { name: 'Jayendran Venkateswaran', institution: 'IIT Bombay, India', profileUrl: 'https://www.ieor.iitb.ac.in/~jayendran', mode: 'In-person', imageUrl: process.env.PUBLIC_URL + '/images/s8.jpg' },
             { name: 'Saurabh Jain', institution: 'IIT Bombay, India', profileUrl: 'https://www.ieor.iitb.ac.in/saurabh', mode: 'In-person', imageUrl: process.env.PUBLIC_URL + '/images/s9.png' }
@@ -430,68 +537,122 @@ function App() {
   
 
   {/* --- Organisers Section --- */}
-<section id="organisers" className="py-20 px-6">
+  <section id="organisers" className="py-20 px-6">
   <div className="max-w-5xl mx-auto text-center">
     <h2 className="text-3xl md:text-4xl font-bold mb-12" data-aos="fade-up">
       Meet the Organisers
     </h2>
     
-    {/* Faculty Advisor */}
+    {/* Workshop Coordinators Section */}
     <div className="mb-16" data-aos="fade-up" data-aos-delay="100">
-      <h3 className="text-2xl font-semibold text-blue-700 mb-6">Workshop Coordinator</h3>
-      <div className="inline-block">
-        <img
-          src={process.env.PUBLIC_URL + '/images/s9.png'}
-          alt="Workshop Coordinator"
-          className="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-lg"
-        />
-        <a 
-          href="https://www.ieor.iitb.ac.in/saurabh" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="text-xl font-semibold text-gray-800 hover:text-blue-600"
-        >
-          Saurabh Jain
-        </a>
-        <p className="text-gray-600">Assistant Professor, IEOR, IITB.</p>
+      <h3 className="text-2xl font-semibold text-blue-700 mb-6">Workshop Coordinators</h3>
+
+      {/* MODIFICATION: 
+        - `flex-col` stacks items vertically on mobile (the default).
+        - `md:flex-row` makes them display side-by-side on medium screens and larger.
+        - `items-center` centers the stacked items on mobile.
+        - `md:items-start` aligns them to the top when they are in a row.
+        - `gap-12` provides vertical spacing on mobile, `md:gap-16` for horizontal on desktop.
+      */}
+      <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-12 md:gap-16">
+      
+        {/* --- Coordinator 1 (Now Saurabh Jain) --- */}
+        <div className="text-center">
+          <img
+            src={process.env.PUBLIC_URL + '/images/s9.png'}
+            alt="Workshop Coordinator"
+            className="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-lg"
+          />
+          <a 
+            href="https://www.ieor.iitb.ac.in/saurabh" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-xl font-semibold text-gray-800 hover:text-blue-600"
+          >
+            Saurabh Jain
+          </a>
+          <p className="text-gray-600">Assistant Professor, IEOR, IITB.</p>
+        </div>
+
+        {/* --- Coordinator 2 (Now Jayendran Venkateswaran) --- */}
+        <div className="text-center">
+          <img
+            src={process.env.PUBLIC_URL + '/images/s8.jpg '}
+            alt="Workshop Coordinator"
+            className="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-lg"
+          />
+          <a 
+            href="https://www.ieor.iitb.ac.in/~jayendran" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-xl font-semibold text-gray-800 hover:text-blue-600"
+          >
+            Jayendran Venkateswaran
+          </a>
+          <p className="text-gray-600">Institute Chair Professor, IEOR, IITB.</p>
+        </div>
+        
       </div>
     </div>
+  
+
 
     {/* Student Organising Committee */}
     <div data-aos="fade-up" data-aos-delay="200">
-      <h3 className="text-2xl font-semibold text-blue-700 mb-6">Student Organising Committee</h3>
+  <h3 className="text-2xl font-semibold text-blue-700 mb-6">Organising Committee</h3>
+  
+  {/* Main container to keep everything centered and constrained */}
+  <div className="max-w-4xl mx-auto">
+
+    {/* Row 1: The first 4 people */}
+    {/* This grid shows 2 columns on mobile and 4 on small screens and up */}
+    <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-8 gap-x-4 mb-8">
       
-      {/* Container for student profiles with images */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-8 gap-x-4 max-w-4xl mx-auto">
-        
-        {/* Student 1 */}
-        <div className="flex flex-col items-center">
-          <img src={process.env.PUBLIC_URL + '/images/varinder.jpg'} alt="Varinder Singh" className="w-24 h-24 rounded-full object-cover shadow-md mb-2"/>
-          <a href="https://www.linkedin.com/in/varinder-singh-9185552a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" className="text-lg text-gray-700 hover:text-blue-600">Varinder Singh</a>
-        </div>
-        
-        {/* Student 2 */}
-        <div className="flex flex-col items-center">
-          <img src={process.env.PUBLIC_URL + '/images/Priyansh.jpg'} alt="Priyansh Srivastava" className="w-24 h-24 rounded-full object-cover shadow-md mb-2"/>
-          <a href="https://www.linkedin.com/in/priyansh-srivastava-2b67891bb?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" className="text-lg text-gray-700 hover:text-blue-600">Priyansh Srivastava</a>
-        </div>
+      {/* Student 1 */}
+      <div className="flex flex-col items-center text-center">
+        <img src={process.env.PUBLIC_URL + '/images/varinder.jpg'} alt="Varinder Singh" className="w-24 h-24 rounded-full object-cover shadow-md mb-2"/>
+        <a href="https://www.linkedin.com/in/varinder-singh-9185552a3" target="_blank" rel="noopener noreferrer" className="text-lg text-gray-700 hover:text-blue-600">Varinder Singh</a>
+      </div>
+      
+      {/* Student 2 */}
+      <div className="flex flex-col items-center text-center">
+        <img src={process.env.PUBLIC_URL + '/images/Priyansh.jpg'} alt="Priyansh Srivastava" className="w-24 h-24 rounded-full object-cover shadow-md mb-2"/>
+        <a href="https://www.linkedin.com/in/priyansh-srivastava-2b67891bb" target="_blank" rel="noopener noreferrer" className="text-lg text-gray-700 hover:text-blue-600">Priyansh Srivastava</a>
+      </div>
 
-        {/* Student 3 */}
-        <div className="flex flex-col items-center">
-          <img src={process.env.PUBLIC_URL + '/images/sid.png'} alt="Siddhesh Madkaikar" className="w-24 h-24 rounded-full object-cover shadow-md mb-2"/>
-          <a href="https://www.linkedin.com/in/siddhesh-madkaikar-122037242/" target="_blank" rel="noopener noreferrer" className="text-lg text-gray-700 hover:text-blue-600">Siddhesh Madkaikar</a>
-        </div>
+      {/* Student 3 */}
+      <div className="flex flex-col items-center text-center">
+        <img src={process.env.PUBLIC_URL + '/images/sid.png'} alt="Siddhesh Madkaikar" className="w-24 h-24 rounded-full object-cover shadow-md mb-2"/>
+        <a href="https://www.linkedin.com/in/siddhesh-madkaikar-122037242/" target="_blank" rel="noopener noreferrer" className="text-lg text-gray-700 hover:text-blue-600">Siddhesh Madkaikar</a>
+      </div>
 
-        {/* Student 4 */}
-        <div className="flex flex-col items-center">
-          <img src={process.env.PUBLIC_URL + '/images/chanchal.jpeg'} alt="Chanchal Rai" className="w-24 h-24 rounded-full object-cover shadow-md mb-2"/>
-          <a href="https://www.linkedin.com/in/chanchal-rai-b62bb0212/" target="_blank" rel="noopener noreferrer" className="text-lg text-gray-700 hover:text-blue-600">Chanchal Rai</a>
-        </div>
-
-       
+      {/* Student 4 */}
+      <div className="flex flex-col items-center text-center">
+        <img src={process.env.PUBLIC_URL + '/images/chanchal.jpeg'} alt="Chanchal Rai" className="w-24 h-24 rounded-full object-cover shadow-md mb-2"/>
+        <a href="https://www.linkedin.com/in/chanchal-rai-b62bb0212/" target="_blank" rel="noopener noreferrer" className="text-lg text-gray-700 hover:text-blue-600">Chanchal Rai</a>
       </div>
     </div>
+
+    {/* Row 2: The last 2 people, centered */}
+    {/* This flex container shows 2 items on all screen sizes and centers them */}
+    <div className="flex flex-wrap justify-center gap-y-8 gap-x-4 sm:gap-x-16">
+      
+      {/* Student 5 */}
+      <div className="flex flex-col items-center text-center">
+        <img src={process.env.PUBLIC_URL + '/images/amlesh.png'} alt="Mr. Amlesh Kumar" className="w-24 h-24 rounded-full object-cover shadow-md mb-2"/>
+        <a href="https://www.ieor.iitb.ac.in/people/office" target="_blank" rel="noopener noreferrer" className="text-lg text-gray-700 hover:text-blue-600">Mr. Amlesh Kumar</a>
+      </div>
+      
+      {/* Student 6 */}
+      <div className="flex flex-col items-center text-center">
+        <img src={process.env.PUBLIC_URL + '/images/aba.png'} alt="Abasaheb Molavane" className="w-24 h-24 rounded-full object-cover shadow-md mb-2"/>
+        <a href="https://www.ieor.iitb.ac.in/people/office" target="_blank" rel="noopener noreferrer" className="text-lg text-gray-700 hover:text-blue-600">Mr. Abasaheb Molavane</a>
+      </div>
+
+    </div>
   </div>
+</div>
+</div>
 </section>
 
 
@@ -526,13 +687,21 @@ function App() {
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Register Now</h2>
         <p className="max-w-2xl mx-auto mb-8">
           Reserve your seat and be part of the future of Digital Twin innovations.
+
         </p>
+
+        <p className="mt-6 text-lg font-bold text-gray-200 text-shadow-md mb-8">
+            Registration Deadline: Oct 3, 2025 (End of Day)
+          </p>
+
         <button
           onClick={() => setModalOpen(true)}
           className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold shadow hover:bg-gray-200"
         >
           Register
+
         </button>
+
       </section>
 
       {/* --- Footer --- */}

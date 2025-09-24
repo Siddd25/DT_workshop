@@ -1,6 +1,7 @@
 {
   "name": "workshop-dt",
   "version": "0.1.0",
+  "homepage": "/digital-twin-workshop",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",

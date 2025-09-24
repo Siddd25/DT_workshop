@@ -426,7 +426,7 @@ const RegisterModal = ({ isOpen, onClose }) => {
           body: JSON.stringify(formData),
           headers: { "Content-Type": "application/json" },
         });
-        alert("✅ Registration successful, we will contact you shortly!");
+        alert("✅ Registration successful, Approval will be communicated via email.");
         // --- UPDATED RESET ---
         setFormData({ name: "", email: "", organisation: "", contact: "", qualification: "", designation: "", domain: "", accommodation: "" });
         setErrors({});
