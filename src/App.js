@@ -278,7 +278,7 @@ function App() {
           <h3 className="text-2xl font-semibold text-blue-700 mb-4">Workshop Details</h3>
           <p className="text-lg mb-2">📍 Venue: <span className="font-medium">F.C Kohli Auditorium, IIT Bombay.</span></p>
           <p className="text-lg mb-2">📅 Dates: <span className="font-medium">11th & 12th October 2025</span></p>
-          <p className="text-lg">⏰ Timings: <span className="font-medium">9:30 AM – 5:30 PM</span></p>
+          <p className="text-lg">⏰ Timings: <span className="font-medium">9:00 AM – 5:30 PM</span></p>
         </div>
       </section>
 
@@ -350,8 +350,10 @@ function App() {
           const speakers = [
             { name: 'Mamadou Kaba Traoré', institution: 'University of Bordeaux, France', profileUrl: 'https://www.ims-bordeaux.fr/researchers-and-publications/traore-mamadou/', mode: 'In-person', imageUrl: process.env.PUBLIC_URL +'/images/s1.jpeg' },
             { name: 'Lora Cavuoto', institution: 'University of Buffalo, USA', profileUrl: 'https://engineering.buffalo.edu/home/research/faculty/profiles.host.html/content/shared/engineering/industrial-systems/profiles/faculty/cavuoto-lora.html', mode: 'Hybrid', imageUrl: process.env.PUBLIC_URL +'/images/s2.jpg' },
+            { name: 'Martino Luis', institution: 'University of Exeter,UK', profileUrl: 'https://experts.exeter.ac.uk/27653-martino-luis', mode: 'Hybrid', imageUrl: process.env.PUBLIC_URL +'/images/s10.jpg' },
             { name: 'Navonil Mustafee', institution: 'University of Exeter, UK', profileUrl: 'https://experts.exeter.ac.uk/22797-nav-mustafee', mode: 'Hybrid', imageUrl: process.env.PUBLIC_URL +'/images/s3.jpeg' },
             { name: 'Seunghan Lee', institution: 'Mississippi State University, USA', profileUrl: 'https://www.ise.msstate.edu/people/faculty/seunghan-lee/', mode: 'Hybrid', imageUrl: process.env.PUBLIC_URL +'/images/s4.jpeg' },
+            { name: 'Ravindra D Gudi', institution: 'IIT Bombay, India', profileUrl: 'https://www.che.iitb.ac.in/faculty-page/ravindra-d-gudi', mode: 'In-person', imageUrl: process.env.PUBLIC_URL +'/images/s11.jpeg' },
             { name: 'Varun Ramamohan', institution: 'IIT Delhi, India', profileUrl: 'https://mech.iitd.ac.in/faculty-profile/189', mode: 'In-person', imageUrl: process.env.PUBLIC_URL + '/images/s5.jpg' },
             { name: 'Neha Karanjkar', institution: 'IIT Goa, India', profileUrl: 'https://nehakaranjkar.github.io/', mode: 'In-person', imageUrl: process.env.PUBLIC_URL + '/images/s6.jpg' }, 
             { name: 'Souvik Barat', institution: 'TCS, India', profileUrl: 'https://www.linkedin.com/in/souvikbarat/', mode: 'In-person', imageUrl: process.env.PUBLIC_URL +'/images/s7.jpeg' },
@@ -360,7 +362,7 @@ function App() {
           ];
 
           return (
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10" data-aos="fade-up">
+            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-10" data-aos="fade-up">
               {speakers.map((speaker, idx) => (
                 <div key={idx} className="text-center bg-white p-8 rounded-2xl shadow hover:shadow-lg transition-shadow flex flex-col items-center justify-between">
                   <div>
@@ -705,38 +707,65 @@ function App() {
       </section>
 
       {/* --- Footer --- */}
-      <footer className="py-12 bg-gray-900 text-gray-400">
-  <div className="mx-auto px-4 sm:px-6 lg:px-8">
+       <footer className="py-12 bg-gray-900 text-gray-400">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8">
 
-    {/* Logos Container */}
-    <div className="flex justify-center items-center gap-x-12 mb-8">
-      {/* IITB Logo */}
-      <a href="https://www.iitb.ac.in/" target="_blank" rel="noopener noreferrer">
-        <img 
-          src={process.env.PUBLIC_URL + '/images/iitb.png'} 
-          alt="IIT Bombay Logo"
-          // Subtle styling: grayscale, semi-transparent, and brightens on hover
-          className="h-14 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-        />
-      </a>
-      {/* IEOR Logo */}
-      <a href="https://www.ieor.iitb.ac.in/" target="_blank" rel="noopener noreferrer">
-        <img 
-          src={process.env.PUBLIC_URL + '/images/ieor_logo.png'} 
-          alt="IEOR Department Logo"
-          className="h-14 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-        />
-      </a>
-    </div>
+        {/* Logos Container */}
+        <div className="flex justify-center items-center gap-x-12 mb-8">
+          {/* IITB Logo */}
+          <a href="https://www.iitb.ac.in/" target="_blank" rel="noopener noreferrer">
+            <img 
+              src={process.env.PUBLIC_URL + '/images/iitb.png'} 
+              alt="IIT Bombay Logo"
+              // Subtle styling: grayscale, semi-transparent, and brightens on hover
+              className="h-14 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+            />
+          </a>
+          {/* IEOR Logo */}
+          <a href="https://www.ieor.iitb.ac.in/" target="_blank" rel="noopener noreferrer">
+            <img 
+              src={process.env.PUBLIC_URL + '/images/ieor_logo.png'} 
+              alt="IEOR Department Logo"
+              className="h-14 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+            />
+          </a>
+        </div>
 
-    {/* Footer Text */}
-    <p className="text-center text-sm">
-      © 2025 Digital Twin Workshop | Department of IEOR, IIT Bombay
-    </p>
+        {/* Copyright Text */}
+        <p className="text-center text-sm">
+          © 2025 Digital Twin Workshop | Department of IEOR, IIT Bombay
+        </p>
+        
+        {/* --- ADDED CONTACT INFO --- */}
+        <div className="mt-6 text-center text-xs space-y-1">
+          <p>
+            Industrial Engineering and Operations Research
+          </p>
+          <p>
+            Room 105, First Floor, IEOR Building, Indian Institute of Technology Bombay
+          </p>
+          <p>
+            Powai, Mumbai, Maharashtra 400076
+          </p>
+          <div className="mt-2">
+            <a href="tel:+912225723480" className="hover:text-white transition-colors duration-300">
+              +91-22-2572 3480
+            </a>
+            <span className="mx-2">|</span>
+            <a href="mailto:office.ieor@iitb.ac.in" className="hover:text-white transition-colors duration-300">
+              office.ieor@iitb.ac.in
+            </a>
 
-  </div>
-</footer>
+            <span className="mx-2">|</span>
+            <a href="mailto:saurabh.jain@iitb.ac.in" className="hover:text-white transition-colors duration-300">
+              saurabh.jain@iitb.ac.in
+            </a>
+            
+          </div>
+        </div>
 
+      </div>
+    </footer>
       <RegisterModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
     </div>
   );
